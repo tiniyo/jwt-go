@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	DefaultConfFilePath = "configs/config.toml"
+	DefaultConfFilePath = "config/config.toml"
 )
 
 var (
@@ -27,7 +27,7 @@ func init() {
 }
 
 func usage() {
-	s := `jwt-go : a Application for JWT Genration and Verification
+	s := `jwt-go : a Application for JWT Generations and Verification
 		Usage: JWT [Options...]
 		Options:
     		-c,  -config=<path>           Config path of the site. Default is configs/config.toml.
@@ -41,7 +41,7 @@ func usage() {
 
 func main() {
 
-	log.Info("Application for JWT Genration and Verification")
+	log.Info("Application for JWT Generations and Verification")
 
 	if help {
 		usage()
