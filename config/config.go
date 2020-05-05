@@ -6,6 +6,7 @@ import (
 	"github.com/labstack/gommon/log"
 	"io/ioutil"
 	"os"
+	"time"
 )
 
 var (
@@ -16,10 +17,15 @@ var (
 type config struct {
 	ReleaseMode bool   `toml:"release_mode"`
 	LogLevel    string `toml:"log_level"`
-	JWTSecretKey string `toml:"jwt_key"`
+	Jwt jwt
 	App app
 
 	Server server
+}
+
+type jwt struct {
+	JWTSecretKey    string `toml:"secret_key"`
+	ExpireMinutes time.Duration `toml:"expire_at"`
 }
 
 type app struct {

@@ -6,7 +6,11 @@ import (
 
 // jwtCustomClaims are custom claims extending default ones.
 type JwtClaims struct {
+	JwtInfo
+	jwt.StandardClaims
+}
+
+type JwtInfo struct {
 	Name  string `json:"name"`
 	Admin bool   `json:"admin"`
-	jwt.StandardClaims
 }

@@ -13,12 +13,16 @@ func createJwt(c *Context) error {
 	response := make(map[string]interface{})
 
 	jwtStandardClaims := jwt.StandardClaims{
-		ExpiresAt: time.Now().Add(time.Hour * 72).Unix(),
+		ExpiresAt: time.Now().Add(time.Hour * config.Conf.Jwt.ExpireMinutes).Unix(),
+	}
+
+	jwtInfo := models.JwtInfo{
+		Name:"Test",
+		Admin:true,
 	}
 	// Set custom claims
 	claims := &models.JwtClaims{
-		Name:"Test",
-		Admin:true,
+		JwtInfo: jwtInfo,
 		StandardClaims:jwtStandardClaims,
 	}
 
@@ -26,12 +30,12 @@ func createJwt(c *Context) error {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 
 	// Generate encoded token and send it as response.
-	t, err := token.SignedString([]byte(config.Conf.JWTSecretKey))
+	tok, err := token.SignedString([]byte(config.Conf.Jwt.JWTSecretKey))
 	if err != nil {
 		return err
 	}
 
-	response["token"] = t
+	response["token"] = tok
 
 	return c.JSON(http.StatusOK, response)
 
@@ -42,8 +46,8 @@ func verifyJwt(c *Context) error {
 
 	user := c.Get("user").(*jwt.Token)
 	claims := user.Claims.(*models.JwtClaims)
-	name := claims.Name
-	return c.String(http.StatusOK, "Welcome "+name+"!")
+	jwtInfo := claims.JwtInfo
+	return c.JSON(http.StatusOK, jwtInfo)
 
 	return nil
 }

@@ -28,7 +28,7 @@ func Routers() *echo.Echo {
 	// Configure middleware with the custom claims type
 	config := mw.JWTConfig{
 		Claims:     &models.JwtClaims{},
-		SigningKey: []byte(config.Conf.JWTSecretKey),
+		SigningKey: []byte(config.Conf.Jwt.JWTSecretKey),
 	}
 
 	e.Use(mw.JWTWithConfig(config))
