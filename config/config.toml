@@ -1,0 +1,16 @@
+# default false
+release_mode = false
+# default DEBUG, DEBUG INFO WARN ERROR OFF
+log_level = "DEBUG"
+
+jwt_secret_key = "my_secret_key"
+
+[app]
+name = "jwt-go"
+version = "0.0.1"
+
+[server]
+graceful = true
+addr = ":8090"
+# Domains
+domain_api = "localhost"
