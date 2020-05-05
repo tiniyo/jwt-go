@@ -48,9 +48,9 @@ Please do **only one** method, do not do both methods, unless of course you know
     
  4. Now you are ready the run the jwt-go microservice
  
-  ```bash
+    ```bash
     ./jwt-go
-  ```
+    ```
     
 ### Method 2: Docker Based Installation
 
@@ -73,8 +73,8 @@ Please do **only one** method, do not do both methods, unless of course you know
 
 3. Now you are ready the run the jwt-go microservice
  
-  ```bash
+    ```bash
     
     docker run jwt-go
     
-  ```
+    ```
