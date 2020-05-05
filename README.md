@@ -13,13 +13,13 @@ jwt-go is a microservice that provides API for creating JWT Token and verifing t
 
 There are 2 methods explained in this document to install jwt-go:
 
-1. Installation on Linux 
+1. Manual Installation Steps
 2. Docker Based Installation
 
 Please do **only one** method, do not do both methods, unless of course you know what you're doing.
 
 
-### Method 1: Installation on Linux By Steps
+### Method 1: Manual Installation Steps
 
 1.  Clone the jwt-go into your go path and change directory to cloned repository.
 
