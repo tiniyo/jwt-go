@@ -31,13 +31,15 @@ func Routers() *echo.Echo {
 		SigningKey: []byte(config.Conf.Jwt.JWTSecretKey),
 	}
 
-	e.Use(mw.JWTWithConfig(config))
+	// Restricted group
+	r := e.Group("/jwt")
+	r.Use(mw.JWTWithConfig(config))
+	r.GET("", handler(verifyJwt))
 
 	e.Use(mw.Logger())
 	e.Use(mw.Recover())
 
 	e.POST("/jwt", handler(createJwt))
-	e.POST("/verifyJwt", handler(verifyJwt))
 
 	return e
 }

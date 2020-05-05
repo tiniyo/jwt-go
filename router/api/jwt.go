@@ -38,8 +38,6 @@ func createJwt(c *Context) error {
 	response["token"] = tok
 
 	return c.JSON(http.StatusOK, response)
-
-	return nil
 }
 
 func verifyJwt(c *Context) error {
@@ -48,6 +46,4 @@ func verifyJwt(c *Context) error {
 	claims := user.Claims.(*models.JwtClaims)
 	jwtInfo := claims.JwtInfo
 	return c.JSON(http.StatusOK, jwtInfo)
-
-	return nil
 }
