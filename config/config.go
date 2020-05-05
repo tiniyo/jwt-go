@@ -24,8 +24,8 @@ type config struct {
 }
 
 type jwt struct {
-	JWTSecretKey    string `toml:"secret_key"`
-	ExpireMinutes time.Duration `toml:"expire_at"`
+	JWTSecretKey    string `toml:"jwt_secret_key"`
+	ExpireMinutes time.Duration `toml:"expire_minutes"`
 }
 
 type app struct {

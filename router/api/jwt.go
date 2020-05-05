@@ -11,7 +11,7 @@ import (
 func createJwt(c *Context) error {
 
 	response := make(map[string]interface{})
-
+	
 	jwtStandardClaims := jwt.StandardClaims{
 		ExpiresAt: time.Now().Add(time.Minute * config.Conf.Jwt.ExpireMinutes).Unix(),
 	}
