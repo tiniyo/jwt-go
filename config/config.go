@@ -11,7 +11,7 @@ import (
 
 var (
 	Conf              config // holds the global app config.
-	defaultConfigFile = "configs/config.toml"
+	defaultConfigFile = "config/config.toml"
 )
 
 type config struct {
