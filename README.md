@@ -1,4 +1,4 @@
-# jwt-go Microservice [work-in-progress]
+# jwt-go Microservice
 
 ## Description
 
