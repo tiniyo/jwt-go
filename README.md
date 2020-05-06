@@ -92,12 +92,17 @@ Please do **only one** method, do not do both methods, unless of course you know
     POST http://yourdomain:8090//jwt
     
     ```
+    
     Success Response
     
     ```bash
+    
     {
+    
     "token": "your_new_generated_token"
+    
     }
+    
     ```
  
    - Verify and Claim the token
