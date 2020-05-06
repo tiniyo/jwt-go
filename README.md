@@ -93,6 +93,11 @@ jwt-go microservice provides 2 API's for creating and verifying the jwt token:
     
     POST http://yourdomain:8090//jwt
     
+    {
+    "name": "Test",
+    "admin": true
+    }
+    
     ```
     
     Success Response
