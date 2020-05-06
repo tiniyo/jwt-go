@@ -83,6 +83,8 @@ Please do **only one** method, do not do both methods, unless of course you know
     
 ## API's
 
+jwt-go microservice provides 2 API's for creating and verifying the jwt token:
+
   - Generate a Token
   
     Request
