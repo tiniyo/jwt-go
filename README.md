@@ -111,7 +111,7 @@ Please do **only one** method, do not do both methods, unless of course you know
     
     ```bash
     
-    GET http://yourdomain:8090//jwt --header 'Authorization: Bearer your_jwt_token'
+    GET http://yourdomain:8090//jwt --header  Authorization: Bearer your_jwt_token
     
     ```
     
