@@ -30,13 +30,13 @@ name = "jwt-go"<br />
 version = "0.0.1"<br />
 
 [server]<br />
-graceful = true
-addr = ":8090"
-domain_api = "localhost"
+graceful = true<br />
+addr = ":8090"<br />
+domain_api = "localhost"<br />
 
-[jwt]
-jwt_secret_key = "my_secret_key"
-expire_minutes = 10
+[jwt]<br />
+jwt_secret_key = "my_secret_key"<br />
+expire_minutes = 10<br />
   
 ## Installation
 
