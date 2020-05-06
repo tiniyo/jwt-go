@@ -25,11 +25,11 @@ jwt-go is a microservice that provides API for creating JWT Token and verifing t
   
 ### sample configuration
   
-[app]
-name = "jwt-go"
-version = "0.0.1"
+[app]<br />
+name = "jwt-go"<br />
+version = "0.0.1"<br />
 
-[server]
+[server]<br />
 graceful = true
 addr = ":8090"
 domain_api = "localhost"
