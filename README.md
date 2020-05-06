@@ -9,6 +9,8 @@ jwt-go is a microservice that provides API for creating JWT Token and verifing t
 
   - Go 1.12 or higher
   
+  - Do NOT disable [Go modules](https://github.com/golang/go/wiki/Modules) (`export GO111MODULE=on`)
+  
 ## Installation
 
 There are 2 methods explained in this document to install jwt-go:
