@@ -4,7 +4,6 @@ import (
 	"github.com/labstack/echo/v4"
 	mw "github.com/labstack/echo/v4/middleware"
 	"github.com/tiniyo/jwt-go/config"
-	"github.com/tiniyo/jwt-go/models"
 )
 
 //-----
@@ -27,7 +26,6 @@ func Routers() *echo.Echo {
 
 	// Configure middleware with the custom claims type
 	config := mw.JWTConfig{
-		Claims:     &models.JwtClaims{},
 		SigningKey: []byte(config.Conf.Jwt.JWTSecretKey),
 	}
 
