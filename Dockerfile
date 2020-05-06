@@ -7,7 +7,7 @@ FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /
 COPY --from=builder /go/src/github.com/jwt-go/app .
-COPY --from=builder /go/src/github.com/jwt-go/conf /conf
+COPY --from=builder /go/src/github.com/jwt-go/config /config
 
 EXPOSE 8080
 
