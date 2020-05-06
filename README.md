@@ -10,6 +10,33 @@ jwt-go is a microservice that provides API for creating JWT Token and verifing t
   - Go 1.12 or higher
   
   - Do NOT disable [Go modules](https://github.com/golang/go/wiki/Modules) (`export GO111MODULE=on`)
+
+## Configuration
+
+  - release_mode          - this will enable and disable the debug mode. default is false.
+  - log_level             - logging level, it can be DEBUG,INFO,WARN,ERROR,OFF
+  - [app] name            - name of the application
+  - [app] version         - version of the application
+  - [server] graceful     - graceful shutdown
+  - [server] addr         - socket address 
+  - [server] domain_api   - serving domain
+  - [jwt] jwt_secret_key  - secret key to be used for generate and verify jwt token
+  - [jwt] expire_minutes  - expire duration of jwt token
+  
+### sample configuration
+  
+[app]
+name = "jwt-go"
+version = "0.0.1"
+
+[server]
+graceful = true
+addr = ":8090"
+domain_api = "localhost"
+
+[jwt]
+jwt_secret_key = "my_secret_key"
+expire_minutes = 10
   
 ## Installation
 
