@@ -92,7 +92,7 @@ Please do **only one** method, do not do both methods, unless of course you know
     POST http://yourdomain:8090//jwt
     
     ```
-    Response
+    Success Response
     
     ```bash
     {
@@ -100,3 +100,29 @@ Please do **only one** method, do not do both methods, unless of course you know
     }
     ```
  
+   - Verify and Claim the token
+  
+    Request
+    
+    ```bash
+    
+    GET http://yourdomain:8090//jwt --header 'Authorization: Bearer your_jwt_token'
+    
+    ```
+    
+    Success Response
+    
+    ```bash
+    {
+    "name": "Test",
+    "admin": true
+    }
+    ```
+    
+    Failed Response
+    
+    ```bash
+    {
+    "message": "invalid or expired jwt"
+    }
+    ```
