@@ -80,3 +80,23 @@ Please do **only one** method, do not do both methods, unless of course you know
     docker run jwt-go
     
     ```
+    
+## API's
+
+  - Generate a Token
+  
+    Request
+    
+    ```bash
+    
+    POST http://yourdomain:8090//jwt
+    
+    ```
+    Response
+    
+    ```bash
+    {
+    "token": "your_new_generated_token"
+    }
+    ```
+ 
