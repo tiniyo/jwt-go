@@ -107,7 +107,7 @@ jwt-go microservice provides 2 API's for creating and verifying the jwt token:
     
     ```
  
-  - Verify and Claim the token
+  - ### Verify and Claim the token
   
     Request
     
