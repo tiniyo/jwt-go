@@ -105,7 +105,7 @@ Please do **only one** method, do not do both methods, unless of course you know
     
     ```
  
-   - Verify and Claim the token
+  - Verify and Claim the token
   
     Request
     
